@@ -29,7 +29,6 @@ durMarker_s = p["durFr_s"] *p["nFrPerMarker"]
 # Read file with M sequence
 #
 try:
-  breakpoint()
   full_path = os.path.join(fPath, p["fNameNoise"] + ".txt")
   f         = open(full_path, 'r')
   iLn       = 0 
