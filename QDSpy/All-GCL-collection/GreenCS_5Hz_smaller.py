@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ---------------------------------------------------------------------
+import os
 import QDS
 
 # Initialize QDS
@@ -33,8 +34,10 @@ nFrPerTrigger = p["TriggerFreq"]/p["durStim_s"]
 # Read files with M sequencefor centre and surround, green and blue LED
 
 try:
-  f_cgreen        = open(fPath +"\\" +p["fNameNoise_cGreen"] +'.txt', 'r') # centre spot green LED
-  f_sgreen        = open(fPath +"\\" +p["fNameNoise_sGreen"] +'.txt', 'r') # surround spot green LED
+  f_cgreen_path = os.path.join(fPath, p["fNameNoise_cGreen"] + '.txt')
+  f_cgreen        = open(f_cgreen_path, 'r') # centre spot green LED
+  f_sgreen_path = os.path.join(fPath, p["fNameNoise_sGreen"] + '.txt')
+  f_sgreen        = open(f_sgreen_path, 'r') # surround spot green LED
   iLn       = 0 
   Frames_centre    = []
   Frames_surround    = []

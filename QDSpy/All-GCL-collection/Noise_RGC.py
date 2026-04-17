@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ---------------------------------------------------------------------
+import os
 import QDS
 
 # Initialize QDS
@@ -28,7 +29,8 @@ durMarker_s = p["durFr_s"] *p["nFrPerMarker"]
 # Read file with M sequence
 #
 try:
-  f         = open(fPath +"\\" +p["fNameNoise"] +'.txt', 'r')
+  f_path = os.path.join(fPath, p["fNameNoise"] +'.txt')
+  f         = open(f_path, 'r')
   iLn       = 0 
   Frames    = []
     

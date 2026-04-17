@@ -6,6 +6,11 @@ import QDS
 import random    
 import numpy as np   
 import os
+from pathlib import Path
+
+# Get the directory of the current script
+FILE_DIR = Path(__file__).parent.resolve()
+
 
 QDS.Initialize("MouseCam_Left")  
   
@@ -22,8 +27,8 @@ p = {"nTrials"         : 1,           # number of stimulus presentations
      "durFr_s"         : 1/FrRefr_Hz, # frame duration
      "nFrPerMarker"    : 3,           # -> 50 ms markers
      "nFrRepeats"      : 2,           # -> 30 fps
-     "movName_Test"    : "//Katrin//RGCs//test_images_rand_right.jpg",
-     "movName_Train"   : "//Katrin//RGCs//train_images_right.jpg",
+     "movName_Test"    : os.path.join(FILE_DIR, "test_images_rand_right.jpg"),
+     "movName_Train"   : os.path.join(FILE_DIR, "train_images_right.jpg"),
      "IndexName"       : "RandomSequences"} 
 
 """ 
@@ -52,7 +57,7 @@ QDS.LogUserParameters(p)
                                        
 # Define objects
 
-Indices = np.loadtxt("C://Users//AGEuler//Documents//QDSpy//Stimuli//Katrin//RGCs//RandomSequences.txt")
+Indices = np.loadtxt(os.path.join(FILE_DIR, "RandomSequences.txt"))
 UseColumn = random.randint(0,19)
 RandomValue = {"SequenceUsed" : UseColumn}
 QDS.LogUserParameters(RandomValue)

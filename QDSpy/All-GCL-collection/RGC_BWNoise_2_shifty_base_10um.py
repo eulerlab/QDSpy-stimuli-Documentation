@@ -39,7 +39,8 @@ fname_shift = p["fNameNoise"] +"_shifty_{0}um".format(p["base_um"]) +".txt"
 # Read file with M sequence
 #
 try:
-  f = open(fPath +"\\" +fname_noise, 'r')
+  f_path = os.path.join(fPath, fname_noise)
+  f = open(f_path, 'r')
   iLn = 0
   Frames = []
 
@@ -68,7 +69,7 @@ finally:
 # ACTIVATE ONLY IF YOU KNOW WHAT YOU ARE DOING
 """
 try:
-  f = open(fPath +"\\" +fname_shift, "w")
+  f = open(os.path.join(fPath, fname_shift), "w")
   s1 = p["boxDx_um"] -p["base_um"]
   ds = p["base_um"]
   f.write(f"{nFr}\n")
@@ -85,7 +86,7 @@ finally:
 # Read file with random shifts
 #
 try:
-  f = open(fPath +"\\" +fname_shift, 'r')
+  f = open(os.path.join(fPath, fname_shift), 'r')
   iLn = 0
   Shifts = []
 
