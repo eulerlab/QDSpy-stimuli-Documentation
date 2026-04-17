@@ -56,7 +56,7 @@ QDS.LogUserParameters(p)
                                                       
 # Define objects
 
-Indices = np.loadtxt(FILE_DIR / "RandomSequences.txt")
+Indices = np.loadtxt(os.path.join(FILE_DIR, "RandomSequences.txt"))
 UseColumn = random.randint(0,19)
 RandomValue = {"SequenceUsed" : UseColumn}
 QDS.LogUserParameters(RandomValue)
