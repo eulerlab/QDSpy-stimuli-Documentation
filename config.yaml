@@ -1,0 +1,11 @@
+qdspy:
+  export_dir: QDSpyExport
+  crop:
+    setup1:
+      h: 10
+      v: 10
+    setup3:
+      h: 10
+      v: 10
+
+output_dir: output

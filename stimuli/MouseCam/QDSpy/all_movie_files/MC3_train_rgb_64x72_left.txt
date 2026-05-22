@@ -1,0 +1,7 @@
+[QDSMovie2Description]
+QDSVersionID=xQDS
+FrWidth=72
+FrHeight=64
+FrCount=16200
+isFirstFrBottomLeft=True
+Comment=MC3_train_rgb_64x72_left

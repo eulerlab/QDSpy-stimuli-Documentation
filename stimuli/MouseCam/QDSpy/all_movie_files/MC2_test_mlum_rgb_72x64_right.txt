@@ -1,0 +1,7 @@
+[QDSMovie2Description]
+QDSVersionID=xQDS
+FrWidth=64
+FrHeight=72
+FrCount=750
+isFirstFrBottomLeft=True
+Comment=MC2_test_mlum_rgb_72x64_right

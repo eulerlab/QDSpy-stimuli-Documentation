@@ -1,0 +1,37 @@
+# cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.Python
+
+# venv
+.venv
+env/
+
+# jupyter
+.ipynb_checkpoints
+
+
+# pycharm
+.idea/
+
+# vscode
+.vscode/
+.claude/
+
+# data
+*.npy
+*.npz
+*.pickle
+*.pkl
+*.h5
+*.hdf5
+*.mp4
+*.tiff
+*.tif
+*.zip
+
+# outputs
+same_name_different_content/
+
