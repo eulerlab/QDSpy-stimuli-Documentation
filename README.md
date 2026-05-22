@@ -7,6 +7,9 @@ The notebooks in this repository produce numpy arrays that can be used to repres
 Note that matplotlib imshow uses the (vertical, horizontal) format, with the vertical axis going from top to bottom and the horizontal from left to right.  
 This is currently assumed to be the target output.
 
+The .npz output files can be downloaded here:
+https://huggingface.co/datasets/eulerlab/all-gcl/tree/main/Stimuli
+
 # Background
 
 ## Setups
